@@ -1,0 +1,20 @@
+{
+  "name": "my_react_portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JTruehitt/My_React_Portfolio.git"
+  },
+  "keywords": [],
+  "author": "Jon Truehitt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JTruehitt/My_React_Portfolio/issues"
+  },
+  "homepage": "https://github.com/JTruehitt/My_React_Portfolio#readme"
+}
