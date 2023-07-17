@@ -34,6 +34,13 @@ const projects = [
         github: "github 5",
         deployed: "deployed 5"
     },
+    {
+        name: "project 6",
+        description: "description 6",
+        image: "image 6",
+        github: "github 6",
+        deployed: "deployed 6"
+    },
 ];
 
 export default projects;

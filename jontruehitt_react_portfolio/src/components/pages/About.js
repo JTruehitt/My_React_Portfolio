@@ -1,6 +1,6 @@
 export default function About() {
     return (
-        <div>
+        <div className="text-center">
         <h1>Nice to meet you, I'm Jon</h1>
         <p>
             ...put cool stuff here...

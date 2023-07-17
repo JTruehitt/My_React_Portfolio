@@ -1,6 +1,6 @@
 export default function Resume() {
     return (
-        <div>
+        <div className="text-center">
         <h1>My Stats</h1>
         <p>
             ...resume here...
