@@ -5,7 +5,7 @@ export default function Header({currentPage, handlePageChange}) {
         <header className='text-center mt-3'>
         <h1>Jon Truehitt</h1>
         <h2>Full Stack Developer</h2>
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-end">
         <Nav currentPage={currentPage} handlePageChange={handlePageChange}/>
         </div>
         </header>
