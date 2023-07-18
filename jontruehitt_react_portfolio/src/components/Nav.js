@@ -1,9 +1,22 @@
+import { useState } from 'react';
+
+
+
 export default function Nav({ currentPage, handlePageChange }) {
+
+  const [navExpanded, setNavExpanded] = useState(false);
+
+  const handleNavToggle = () => {
+    navExpanded ? setNavExpanded(!navExpanded) : setNavExpanded(navExpanded);
+  }
+
+
   return (
     <nav className="navbar navbar-expand-sm justify-content-center">
       <div className="container-fluid d-flex justify-content-center">
           <button
-            className="navbar-toggler mb-1"
+            className={navExpanded ? 'navbar-toggler mb-1' : 'navbar-toggler mb-1 collapsed'}
+            onClick={() => setNavExpanded(!navExpanded)}
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -12,12 +25,12 @@ export default function Nav({ currentPage, handlePageChange }) {
             aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div className={navExpanded ? 'collapse navbar-collapse show' : 'collapse navbar-collapse'} id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <a
                 href="#about"
-                onClick={() => handlePageChange('About')}
+                onClick={() => {handlePageChange('About'); handleNavToggle();}}
                 className={
                   currentPage === 'About' ? 'nav-link active' : 'nav-link'
                 }>
@@ -27,7 +40,7 @@ export default function Nav({ currentPage, handlePageChange }) {
             <li className="nav-item">
               <a
                 href="#portfolio"
-                onClick={() => handlePageChange('Portfolio')}
+                onClick={() => {handlePageChange('Portfolio'); handleNavToggle();}}
                 className={
                   currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'
                 }>
@@ -37,7 +50,7 @@ export default function Nav({ currentPage, handlePageChange }) {
             <li className="nav-item">
               <a
                 href="#contact"
-                onClick={() => handlePageChange('Contact')}
+                onClick={() => {handlePageChange('Contact'); handleNavToggle();}}
                 className={
                   currentPage === 'Contact' ? 'nav-link active' : 'nav-link'
                 }>
@@ -47,7 +60,7 @@ export default function Nav({ currentPage, handlePageChange }) {
             <li className="nav-item">
               <a
                 href="#resume"
-                onClick={() => handlePageChange('Resume')}
+                onClick={() => {handlePageChange('Resume'); handleNavToggle();}}
                 className={
                   currentPage === 'Resume' ? 'nav-link active' : 'nav-link'
                 }>

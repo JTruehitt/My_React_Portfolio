@@ -1,85 +1,99 @@
 :root {
-    --step--2: clamp(0.69rem, calc(0.66rem + 0.18vw), 0.80rem);
-    --step--1: clamp(0.83rem, calc(0.78rem + 0.29vw), 1.00rem);
-    --step-0: clamp(1.00rem, calc(0.91rem + 0.43vw), 1.25rem);
-    --step-1: clamp(1.20rem, calc(1.07rem + 0.63vw), 1.56rem);
-    --step-2: clamp(1.44rem, calc(1.26rem + 0.89vw), 1.95rem);
-    --step-3: clamp(1.73rem, calc(1.48rem + 1.24vw), 2.44rem);
-    --step-4: clamp(2.07rem, calc(1.73rem + 1.70vw), 3.05rem);
-    --step-5: clamp(2.49rem, calc(2.03rem + 2.31vw), 3.82rem);
-  }
+  --step--2: clamp(0.69rem, calc(0.66rem + 0.18vw), 0.8rem);
+  --step--1: clamp(0.83rem, calc(0.78rem + 0.29vw), 1rem);
+  --step-0: clamp(1rem, calc(0.91rem + 0.43vw), 1.25rem);
+  --step-1: clamp(1.2rem, calc(1.07rem + 0.63vw), 1.56rem);
+  --step-2: clamp(1.44rem, calc(1.26rem + 0.89vw), 1.95rem);
+  --step-3: clamp(1.73rem, calc(1.48rem + 1.24vw), 2.44rem);
+  --step-4: clamp(2.07rem, calc(1.73rem + 1.7vw), 3.05rem);
+  --step-5: clamp(2.49rem, calc(2.03rem + 2.31vw), 3.82rem);
+}
 
-  body {
-    font-size: var(--step--1);
-  }
+body {
+  font-size: var(--step--1);
+}
 
-  p {
-    max-inline-size: 60ch;
-  }
+p {
+  max-inline-size: 60ch;
+}
 .active {
-    color: rgb(137, 34, 233) !important
+  color: rgb(137, 34, 233) !important;
 }
 
 /* setting class to style projects. the */
 .card {
-    background-size: cover;
-    background-position: center;
-    border: none;
-    margin: 10px;
-    width: 300px;
-    height: 400px;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-  }
-  
-  .card-body {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 15px;
-  }
-  
-  .card-title {
-    color: #fff;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .card-text {
-    color: #fff;
-    font-size: 1rem;
-    margin-bottom: 15px;
-  }
-  
-  .card-links {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .btn {
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    padding: 6px 12px;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 0.875rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .btn:hover {
-    background-color: #0056b3;
-  }
+  background-size: cover;
+  background-position: center;
+  border: none;
+  margin: 10px;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
 
-  .footer-icons > *{
-    padding-inline: .25em;
-    font-size: 1.5em;
-  }
-  
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-body {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+}
+
+.card-title {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.card-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-icons > * {
+  padding-inline: 0.25em;
+  font-size: 1.5em;
+}
+
+.main {
+  margin-block-end: 7vh;
+}
+
+.footer {
+  height: 5vh;
+}
+
+.profilePicContainer {
+  width: 100%;
+  max-width: 300px; 
+}
+
+.project {
+  max-width: 100%;
+}
+
+.customBtn, .btn {
+  background-color: rgb(137, 34, 233) !important;
+  color: #fff
+}
+
+.customBtn:hover, .btn:hover {
+  background-color: rgb(99, 61, 134) !important;
+  color: white !important;
+}
+
+.proficiencyContainer {
+  gap: 1rem;
+}

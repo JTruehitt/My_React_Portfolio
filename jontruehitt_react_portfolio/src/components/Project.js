@@ -1,36 +1,44 @@
-// export default function Project({ projects }) {
-    
-//     return (
-//         <ul className="d-flex flex-wrap">
-//             {projects.map((project) => (
-//                 <li className="list-group-item project" key={project.name}>
-//                     <h3>{project.name}</h3>
-//                     <p>{project.description}</p>
-//                     <img src={project.image} alt={project.name} />
-//                     <a href={project.github}>GitHub</a>
-//                     <a href={project.deployed}>Deployed</a>
-//                 </li>
-//             ))}
-//         </ul>
-//     );
-// }
-
+import { useState } from 'react';
+import { FaGithub } from 'react-icons/fa';
 
 export default function Project({ projects }) {
-    return (
-      <div className="d-flex flex-wrap justify-content-center">
-        {projects.map((project) => (
-          <div className="card project" key={project.name} style={{ backgroundImage: `url(${project.image})` }}>
-            <div className="card-body">
-              <h3 className="card-title">{project.name}</h3>
+  const [hoveredProject, setHoveredProject] = useState(null);
+
+  const handleProjectHover = (projectName) => {
+    setHoveredProject(projectName);
+  };
+
+  const handleProjectLeave = () => {
+    setHoveredProject(null);
+  };
+
+  return (
+    <div className="d-flex flex-wrap justify-content-center projects-container">
+      {projects.map((project) => (
+        <div
+          className="card project"
+          key={project.name}
+          style={{ backgroundImage: `url(${project.image})` }}
+          onMouseEnter={() => handleProjectHover(project.name)}
+          onMouseLeave={() => handleProjectLeave()}>
+          <div className="card-body">
+            <h3 className="card-title text-center">{project.name}</h3>
+            {hoveredProject === project.name && (
+              <>
               <p className="card-text">{project.description}</p>
               <div className="card-links">
-                <a href={project.github} className="btn btn-primary">GitHub</a>
-                <a href={project.deployed} className="btn btn-primary">Deployed</a>
+                <a href={project.github}>
+                  <FaGithub className="icon fs-1" />
+                </a>
+                <a href={project.deployed} className="btn">
+                  Launch App
+                </a>
               </div>
-            </div>
+              </>
+            )}
           </div>
-        ))}
-      </div>
-    );
-  }
+        </div>
+      ))}
+    </div>
+  );
+}

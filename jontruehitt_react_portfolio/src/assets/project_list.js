@@ -1,10 +1,10 @@
 const projects = [
     {
-        name: "project 1",
-        description: "description 1",
-        image: "image 1",
-        github: "github 1",
-        deployed: "deployed 1"
+        name: "Pawsitive Connections",
+        description: "MySQL, express, handlebars, session-cookies...",
+        image: require("../assets/pawsitive_connections.png"),
+        github: "https://github.com/JTruehitt/Pawsitive_Connections",
+        deployed: "https://stark-harbor-37192.herokuapp.com/"
     },
     {
         name: "project 2",

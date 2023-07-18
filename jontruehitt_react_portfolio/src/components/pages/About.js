@@ -1,7 +1,10 @@
+import profilePhoto from '../../assets/profile_placeholder.png'
+
 export default function About() {
     return (
       <div className="text-center container d-flex flex-column align-items-center">
-        <h1>Nice to meet you, I'm Jon</h1>
+        <h1>Nice to meet you, I'm <span className='active'>Jon</span></h1>
+        <div className='profilePicContainer'><img src={profilePhoto} alt="Jon Truehitt" className="img-fluid rounded-circle my-3" /></div>
         <p>
           Welcome to my page! Thanks for stopping by.
         </p>

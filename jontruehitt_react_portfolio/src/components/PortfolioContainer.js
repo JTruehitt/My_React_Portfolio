@@ -30,17 +30,12 @@ export default function PortfolioContainer() {
 
   // render header and footer on every page
   return (
-    <div>
-      <Header currentPage={currentPage} handlePageChange={handlePageChange}/>
-      {/* <About /> // remove this line after testing
-      <Portfolio />
-      // remove this line after testing
-      <Contact />
-      // remove this line after testing
-      <Resume />
-      // remove this line after testing */}
-      {renderPage()}
-      <Footer />
+    <div className='d-flex flex-column'>
+        <div className='main'>
+          <Header currentPage={currentPage} handlePageChange={handlePageChange}/>
+          {renderPage()}
+        </div>
+      <Footer className='footer'/>
     </div>
   );
 }

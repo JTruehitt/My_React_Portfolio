@@ -2,8 +2,8 @@ import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 export default function Footer() {
   return (
-    <footer className="footer fixed-bottom text-center bg-dark text-light">
-      <div className="container">
+    <div className="fixed-bottom text-center bg-dark text-light">
+      <div className="container d-flex flex-column align-items-center">
         <div className="footer-icons">
           <a href="https://github.com/JTruehitt">
             <FaGithub className="icon" />
@@ -15,8 +15,8 @@ export default function Footer() {
             <FaTwitter className="icon" />
           </a>
         </div>
-        <p className="footer-text">© 2023 Jon Truehitt. All rights reserved.</p>
+        <p className="footer-text text-center">© 2023 Jon Truehitt. All rights reserved.</p>
       </div>
-    </footer>
+    </div>
   );
 }

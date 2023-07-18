@@ -68,13 +68,37 @@ export default function Contact() {
     sendEmail();
   };
 
+  const handleNameBlur = () => {
+    if (name.trim() === '') {
+      setNameError('Name is required');
+    } else {
+      setNameError('');
+    }
+  };
+
+  const handleEmailBlur = () => {
+    if (email.trim() === '') {
+      setEmailError('Email address is required');
+    } else {
+      setEmailError('');
+    }
+  };
+
+  const handleMessageBlur = () => {
+    if (message.trim() === '') {
+      setMessageError("Don't forget to write a message!");
+    } else {
+      setMessageError('');
+    }
+  };
+
   return (
-    <div>
+    <div className='w-100'>
       <div className="d-flex flex-column align-items-center">
         <h1>Let's get in touch!</h1>
         <p className="">Fill out the form below to send me an email.</p>
       </div>
-      <form ref={form} className="container w-50" onSubmit={handleFormSubmit}>
+      <form ref={form} className="container w-75" onSubmit={handleFormSubmit}>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">
             Name
@@ -87,6 +111,7 @@ export default function Contact() {
             placeholder="Enter your name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            onBlur={handleNameBlur}
           />
           {nameError && (
             <div className="text-danger text-center">{nameError}</div>
@@ -105,6 +130,7 @@ export default function Contact() {
             Enter your email address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            onBlur={handleEmailBlur}
           />
           {emailError && (
             <div className="text-danger text-center">{emailError}</div>
@@ -120,13 +146,15 @@ export default function Contact() {
             id="message"
             rows="3"
             value={message}
-            onChange={(e) => setMessage(e.target.value)}></textarea>
+            onChange={(e) => setMessage(e.target.value)}
+            onBlur={handleMessageBlur}
+            ></textarea>
           {messageError && (
             <div className="text-danger text-center">{messageError}</div>
           )}
         </div>
         <div className="d-flex flex-column justify-content-center">
-          <button type="submit" className="btn btn-primary mb-2">
+          <button type="submit" className="btn customBtn mb-2">
             Submit
           </button>
           {successMessage && (
