@@ -6,6 +6,9 @@
 
   ## Description
    My introduction to react, built based off of the create-react-app. Learning the flow of a react app and developing the mindeset for where and when to utilize state.
+
+  ## Link to Deployed Page
+  https://jtruehitt.github.io/My_React_Portfolio/
   
   ## Table of Contents
   
