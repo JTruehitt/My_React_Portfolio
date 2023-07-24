@@ -1,4 +1,4 @@
-import myResume from '../../assets/dummyresume.pdf';
+import myResume from '../../assets/Old_Resume.pdf';
 import { useState } from 'react';
 
 const proficiencies = [
