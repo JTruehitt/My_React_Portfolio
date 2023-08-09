@@ -1,5 +1,12 @@
 const projects = [
     {
+        name: "Daily Dungeon",
+        description: "A simple MERN Stack DnD'esque RPG Game.",
+        image: require("../assets/DD.png"),
+        github: "https://github.com/jmcconna/Daily-Dungeon",
+        deployed: "https://github.com/JTruehitt/https://fathomless-brook-62747-69ac2fbd8802.herokuapp.com/"
+    },
+    {
         name: "Pawsitive Connections",
         description: "MySQL, express, handlebars, session-cookies...",
         image: require("../assets/pawsitive_connections.png"),
@@ -26,13 +33,6 @@ const projects = [
         image: "https://placehold.co/300x200",
         github: "https://github.com/JTruehitt/MVC_Tech_Blog",
         deployed: "https://gentle-earth-34458.herokuapp.com/4"
-    },
-    {
-        name: "Social Network API",
-        description: "Backend for what a simple social app could be.",
-        image: "https://placehold.co/300x200",
-        github: "https://github.com/JTruehitt/Social_Network_API",
-        deployed: "https://github.com/JTruehitt/Social_Network_API"
     },
     {
         name: "Rock, Paper, Scissors",

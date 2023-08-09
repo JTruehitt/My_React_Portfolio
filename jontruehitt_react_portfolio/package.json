@@ -1,4 +1,5 @@
 {
+  "homepage": "https://jtruehitt.github.io/My_React_Portfolio",
   "name": "jontruehitt_react_portfolio",
   "version": "0.1.0",
   "private": true,
@@ -42,4 +43,5 @@
       "last 1 safari version"
     ]
   }
+  
 }
